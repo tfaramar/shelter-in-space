@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import './App.css';
 import Image from './components/Image';
+import DateSection from './components/DateSection';
 
 
 function App() {
@@ -37,7 +38,11 @@ function App() {
       <div className="header">
         <h1>Shelter in Space</h1>
       </div>
-      {/* <DateSection setDate={setDate}/> */}
+      <div className="about">
+        <p>What this is and why I made it.</p>
+        <DateSection setDate={setDate} />
+        <button type="button">Take me to space!</button>
+      </div>
       <Image imgUrl={image}/>
       <div className="imageInfo">
           <div className="credits">
@@ -49,7 +54,9 @@ function App() {
           </div>
       </div>
       <div className="footer">
-        Font awesome icons here
+        <a href="https://www.linkedin.com/in/tatiana-faramarzi-598897174/" target="_blank"><i class="fab fa-linkedin-in"></i></a>        
+        <a href="https://github.com/tfaramar/shelter-in-space" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://angel.co/tatiana-faramarzi" target="_blank"><i class="fab fa-angellist"></i></a>
       </div>
     </div>
   );
