@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
 
@@ -16,10 +16,15 @@ function formatDate(date) {
 }
 
 function DateSection({ setDate }) {
+    const [day, setDay] = useState("");
+
     return (
         <div>
             <p>pick a date:</p>
-            <DayPickerInput onDayChange={day => setDate(formatDate(day))} />
+            <DayPickerInput onDayChange={day => setDay(formatDate(day))} />
+            <div>
+                <button type="button" onClick={() => setDate(day)}>Take me to space!</button>
+            </div>
         </div>   
     );
 }

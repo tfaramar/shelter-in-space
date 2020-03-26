@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Image({ imgUrl }) {
-    if (!imgUrl) return <h3>Loading...</h3>;
+    // if (!imgUrl) return <h3>Loading...</h3>;
 
     return (
         <div className="dailyImage">
