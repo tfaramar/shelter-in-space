@@ -22,7 +22,7 @@ function App() {
   const loader = (
     <Loader 
       type="TailSpin"
-      color="red"
+      color="goldenrod"
       height={100}
       width={100}
     />
@@ -52,12 +52,14 @@ function App() {
     <div className="App">
       <div className="header">
         <h1>Shelter in Space</h1>
+        <div className="about">
+          <p>What this is and why I made it.</p>
+          <DateSection setDate={setDate} />
+        </div>
       </div>
-      <div className="about">
-        <p>What this is and why I made it.</p>
-        <DateSection setDate={setDate} />
+      <div className="image">
+        {loading ? loader : <Image imgUrl={image} />}
       </div>
-      {loading ? loader : <Image imgUrl={image} />}
       <div className="imageInfo">
           <div className="credits">
             <h3>{title}</h3>

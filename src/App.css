@@ -1,38 +1,90 @@
 .App {
   text-align: center;
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
+  padding: 2rem 3rem;
+  color: #001a33;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 4.75rem;
+  color: #DAA520;
+  padding: 0 2rem 0 0;
+  min-width: 45%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.imageInfo, .header {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.datePicker {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+.header {
+  align-items: center;
+}
+
+.about {
+  padding: 0 2rem;
+  border-left: 1px solid #001a33;
+  width: 100%;
+}
+
+.dateSection {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem 0;
+}
+
+.dateSection button {
+  border: 1px solid #001a33;
+  padding: 0.5rem;
+  width: 10rem;
+  color: #001a33;
+}
+
+.dateSection button:hover {
+  cursor: pointer;
+  background-color: #001a33;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.image {
+  min-height: 10rem;
+  min-width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.credits {
+  display: flex;
+  flex-direction: column;
+  min-width: 30%;
+  border-right: 1px solid #001a33;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.description {
+  padding: 0 2rem;
+}
+
+.footer {
+  padding-top: 3rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #001a33;
+  padding: 0.5rem;
+}
+
+.footer a:hover {
+  color: #DAA520;
+  
 }

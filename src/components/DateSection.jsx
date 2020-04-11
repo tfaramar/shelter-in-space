@@ -19,12 +19,12 @@ function DateSection({ setDate }) {
     const [day, setDay] = useState("");
 
     return (
-        <div>
-            <p>pick a date:</p>
-            <DayPickerInput onDayChange={day => setDay(formatDate(day))} />
-            <div>
-                <button type="button" onClick={() => setDate(day)}>Take me to space!</button>
-            </div>
+        <div className="dateSection">
+            <div className="datePicker">
+                <p>Choose a date: &nbsp;</p>
+                <DayPickerInput onDayChange={day => setDay(formatDate(day))} />
+            </div> 
+            <button type="button" onClick={() => setDate(day)}>Take me to space!</button>
         </div>   
     );
 }
