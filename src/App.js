@@ -32,7 +32,7 @@ function App() {
     setLoading(true);
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=y54CZckTolqCojW2qsO0J497f2bsh3yFgzEjyKkf&date=${date}`)
       .then(res => {
-        console.log(res);
+        // console.log(res);
         const imgUrl = res.data.hdurl;
         setImage(imgUrl);
         const cred = res.data.copyright;
@@ -53,7 +53,7 @@ function App() {
       <div className="header">
         <h1>Shelter in Space</h1>
         <div className="about">
-          <p>What this is and why I made it.</p>
+          <p>With your body, you can visit the world. With your mind (and some help from the mighty Internet) you can visit the universe. This minimal website was created for anyone feeling cooped up during the current shelter-in-place order to explore the cosmos, courtesy of NASA's photo of the day API.</p>
           <DateSection setDate={setDate} />
         </div>
       </div>

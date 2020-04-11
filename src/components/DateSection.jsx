@@ -21,7 +21,7 @@ function DateSection({ setDate }) {
     return (
         <div className="dateSection">
             <div className="datePicker">
-                <p>Choose a date: &nbsp;</p>
+                <p>Pick a date: &nbsp;</p>
                 <DayPickerInput onDayChange={day => setDay(formatDate(day))} />
             </div> 
             <button type="button" onClick={() => setDate(day)}>Take me to space!</button>

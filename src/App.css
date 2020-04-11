@@ -58,7 +58,7 @@
 
 .image {
   min-height: 10rem;
-  min-width: 100%;
+  width: 100%;
 }
 
 .credits {
@@ -68,6 +68,10 @@
   border-right: 1px solid #001a33;
   justify-content: center;
   padding: 0 2rem;
+}
+
+.credits p {
+  margin-top: 0.5rem;
 }
 
 .description {
