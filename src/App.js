@@ -10,7 +10,7 @@ import Image from './components/Image';
 
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [errMsg, setErrMsg] = useState(false);
 
   const [date, setDate] = useState("");
   const [credit, setCredit] = useState("");
@@ -33,6 +33,7 @@ function App() {
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=y54CZckTolqCojW2qsO0J497f2bsh3yFgzEjyKkf&date=${date}`)
       .then(res => {
         // console.log(res);
+        setErrMsg(false);
         const imgUrl = res.data.hdurl;
         setImage(imgUrl);
         const cred = res.data.copyright;
@@ -45,20 +46,34 @@ function App() {
       })
       .catch(err => {
         console.log(err)
+        setLoading(false);
+        setErrMsg(true);
       })
   }, [date]);
+
+  const img = () => {
+    if (loading) {
+      return loader;
+    } else if (errMsg) {
+      return (
+        <p className="error">Oops! It looks like there is no photo of the day for the day you picked. Please be sure you aren't trying to look into the future.</p>
+      )
+    } else {
+      return <Image imgUrl={image} />
+    }
+  }
 
   return (
     <div className="App">
       <div className="header">
         <h1>Shelter in Space</h1>
         <div className="about">
-          <p>With your body, you can visit the world. With your mind (and some help from the mighty Internet) you can visit the universe. This minimal website was created for anyone feeling cooped up during the current shelter-in-place order to explore the cosmos, courtesy of NASA's photo of the day API.</p>
-          <DateSection setDate={setDate} />
+          <p><strong>With your body, you can visit the world. With your mind (and some help from the mighty Internet) you can visit the universe.</strong> This minimal website was created for anyone feeling cooped up during the current shelter-in-place order to explore the cosmos, courtesy of NASA's photo of the day API.</p>
+          <DateSection setDate={setDate} setErrMsg={setErrMsg} />
         </div>
       </div>
       <div className="image">
-        {loading ? loader : <Image imgUrl={image} />}
+        {img()}
       </div>
       <div className="imageInfo">
           <div className="credits">

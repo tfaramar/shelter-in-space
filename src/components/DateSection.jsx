@@ -15,7 +15,7 @@ function formatDate(date) {
     return [year, month, day].join("-");
 }
 
-function DateSection({ setDate }) {
+function DateSection({ setDate, setErrMsg }) {
     const [day, setDay] = useState("");
 
     return (
