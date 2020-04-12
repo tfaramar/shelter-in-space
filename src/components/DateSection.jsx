@@ -3,7 +3,6 @@ import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
 
 function formatDate(date) {
-    console.log("setting new date");
     let d = new Date(date);
     let month = "" + (d.getMonth() + 1);
     let day = "" + d.getDate();

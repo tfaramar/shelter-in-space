@@ -2,16 +2,18 @@
   text-align: center;
   background-color: white;
   font-family: 'Open Sans', sans-serif;
-  padding: 2rem 3rem;
+  padding: 2rem 4rem;
   color: #001a33;
 }
 
 .header h1 {
   font-family: 'Sacramento', cursive;
-  font-size: 4.75rem;
+  font-size: 5rem;
+  font-weight: bolder;
   color: #EEAE1F;
+  line-height: 0.85;
   padding: 0 2rem 0 0;
-  min-width: 45%;
+  min-width: 40%;
 }
 
 .imageInfo, .header {
@@ -51,6 +53,7 @@
 .dateSection button {
   border: 1px solid #001a33;
   padding: 0.5rem;
+  font-size: 0.9rem;
   width: 10rem;
   color: #001a33;
 }
