@@ -56,7 +56,9 @@ function App() {
       return loader;
     } else if (errMsg) {
       return (
-        <p className="error">Oops! It looks like there is no photo of the day for the day you picked. Please be sure you aren't trying to look into the future.</p>
+        <div className="error">
+          <p>Oops! It looks like there is no photo of the day for the day you picked. Please be sure you aren't trying to look into the future.</p>
+        </div> 
       )
     } else {
       return <Image imgUrl={image} />
@@ -68,7 +70,7 @@ function App() {
       <div className="header">
         <h1>Shelter in Space</h1>
         <div className="about">
-          <p><strong>With your body, you can visit the world. With your mind (and some help from the mighty Internet) you can visit the universe.</strong> This minimal website was created for anyone feeling cooped up during the current shelter-in-place order to explore the cosmos, courtesy of NASA's photo of the day API.</p>
+          <p><strong>With your body, you can visit the world. With your mind (and some help from the Internet) you can visit the universe.</strong> This minimal website was created for anyone feeling cooped up during the current shelter-in-place order to explore the cosmos, courtesy of <a href="https://api.nasa.gov/#apod" rel="noopener noreferrer" target="_blank" >NASA's photo of the day API.</a></p>
           <DateSection setDate={setDate} setErrMsg={setErrMsg} />
         </div>
       </div>

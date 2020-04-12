@@ -9,7 +9,7 @@
 .header h1 {
   font-family: 'Sacramento', cursive;
   font-size: 4.75rem;
-  color: #DAA520;
+  color: #EEAE1F;
   padding: 0 2rem 0 0;
   min-width: 45%;
 }
@@ -32,8 +32,13 @@
 
 .about {
   padding: 0 2rem;
-  border-left: 1px solid #001a33;
+  border-left: 1px dotted #001a33;
   width: 100%;
+}
+
+.about a {
+  text-decoration: none;
+  color: #001a33;
 }
 
 .dateSection {
@@ -61,11 +66,18 @@
   width: 100%;
 }
 
+.error {
+  padding: 6rem 5rem;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #EEAE1F;
+}
+
 .credits {
   display: flex;
   flex-direction: column;
-  min-width: 30%;
-  border-right: 1px solid #001a33;
+  min-width: 27%;
+  border-right: 1px dotted #001a33;
   justify-content: center;
   padding: 0 2rem;
 }
@@ -79,7 +91,7 @@
 }
 
 .footer {
-  border-top: 1px solid #001a33;
+  border-top: 1px dotted #001a33;
   padding-top: 2.5rem;
 }
 
@@ -90,6 +102,6 @@
 }
 
 .footer a:hover {
-  color: #DAA520;
+  color: #EEAE1F;
   
 }
