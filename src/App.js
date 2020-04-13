@@ -11,7 +11,7 @@ import Image from './components/Image';
 
 function App() {
   const [errMsg, setErrMsg] = useState(false);
-
+  //set isVideo slice of state
   const [date, setDate] = useState("");
   const [credit, setCredit] = useState("");
   const [title, setTitle] = useState("");
@@ -32,7 +32,7 @@ function App() {
     setLoading(true);
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=y54CZckTolqCojW2qsO0J497f2bsh3yFgzEjyKkf&date=${date}`)
       .then(res => {
-        // console.log(res);
+        console.log(res);
         setErrMsg(false);
         const imgUrl = res.data.hdurl;
         setImage(imgUrl);
@@ -62,7 +62,7 @@ function App() {
       )
     } else {
       return <Image imgUrl={image} />
-    }
+    } //alt return video player
   }
 
   return (
