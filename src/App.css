@@ -111,6 +111,10 @@
 
 /* Add media queries for mobile-width */
 @media only screen and (max-width: 750px) {
+  .App {
+    padding: 1rem 3rem;
+  }
+
   .header, .imageInfo {
     flex-direction: column;
   }
