@@ -65,7 +65,7 @@
 }
 
 .image {
-  min-height: 30rem;
+  min-height: 25rem;
   width: 100%;
 }
 
@@ -110,3 +110,25 @@
 }
 
 /* Add media queries for mobile-width */
+@media only screen and (max-width: 750px) {
+  .header, .imageInfo {
+    flex-direction: column;
+  }
+
+  .about {
+    border-top: 1px dotted #001a33;
+    border-left: none;
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+
+  .image {
+    min-height: 15rem;
+  }
+
+  .credits {
+    border-right: none;
+    border-bottom: 1px dotted #001a33;
+    margin-bottom: 2rem;
+  }
+}
