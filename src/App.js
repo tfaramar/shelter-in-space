@@ -33,16 +33,16 @@ function App() {
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=y54CZckTolqCojW2qsO0J497f2bsh3yFgzEjyKkf&date=${date}`)
       .then(res => {
         console.log(res);
-        setErrMsg(false);
-        const imgUrl = res.data.hdurl;
-        setImage(imgUrl);
-        const cred = res.data.copyright;
-        setCredit(cred);
-        const des = res.data.explanation;
-        setDescription(des);
-        const titl = res.data.title;
-        setTitle(titl);
-        setLoading(false);
+        // setErrMsg(false);
+        // const imgUrl = res.data.hdurl;
+        // setImage(imgUrl);
+        // const cred = res.data.copyright;
+        // setCredit(cred);
+        // const des = res.data.explanation;
+        // setDescription(des);
+        // const titl = res.data.title;
+        // setTitle(titl);
+        // setLoading(false);
       })
       .catch(err => {
         console.log(err)

@@ -12,6 +12,7 @@
     "react-day-picker": "^7.4.0",
     "react-dom": "^16.13.0",
     "react-loader-spinner": "^3.1.5",
+    "react-player": "^1.15.3",
     "react-scripts": "3.4.0",
     "styled-components": "^5.0.1"
   },
