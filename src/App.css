@@ -3,17 +3,20 @@
   background-color: white;
   font-family: 'Open Sans', sans-serif;
   padding: 2rem 4rem;
+  margin: 0 auto;
+  max-width: 1300px;
   color: #001a33;
 }
 
 .header h1 {
   font-family: 'Sacramento', cursive;
-  font-size: 5.5rem;
+  font-size: 6rem;
   font-weight: bolder;
   color: #EEAE1F;
-  line-height: 0.85;
+  line-height: 0.75;
   padding: 0 2rem 0 0;
   min-width: 40%;
+  text-shadow: 1px 1px 2px #001a33;
 }
 
 .imageInfo, .header {
@@ -67,6 +70,12 @@
 .image {
   min-height: 25rem;
   width: 100%;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.react-player {
+  margin: 0 auto;
 }
 
 .error {
@@ -117,6 +126,12 @@
 
   .header, .imageInfo {
     flex-direction: column;
+  }
+
+  .react-player {
+    margin: 0 auto;
+    padding: 2rem 0;
+    width: 50%;
   }
 
   .about {

@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import DateSection from './components/DateSection';
 import Loader from 'react-loader-spinner';
+import ReactPlayer from 'react-player';
 
 import './App.css';
 import Image from './components/Image';
@@ -17,6 +18,8 @@ function App() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
+  const [mediaType, setMediaType] = useState("image");
+
   const [loading, setLoading] = useState(false);
 
   const loader = (
@@ -32,17 +35,18 @@ function App() {
     setLoading(true);
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=y54CZckTolqCojW2qsO0J497f2bsh3yFgzEjyKkf&date=${date}`)
       .then(res => {
-        console.log(res);
-        // setErrMsg(false);
-        // const imgUrl = res.data.hdurl;
-        // setImage(imgUrl);
-        // const cred = res.data.copyright;
-        // setCredit(cred);
-        // const des = res.data.explanation;
-        // setDescription(des);
-        // const titl = res.data.title;
-        // setTitle(titl);
-        // setLoading(false);
+        // console.log(res);
+        setErrMsg(false);
+        setMediaType(res.data.media_type);
+        const imgUrl = res.data.url;
+        setImage(imgUrl);
+        const cred = res.data.copyright;
+        setCredit(cred);
+        const des = res.data.explanation;
+        setDescription(des);
+        const titl = res.data.title;
+        setTitle(titl);
+        setLoading(false);
       })
       .catch(err => {
         console.log(err)
@@ -60,9 +64,11 @@ function App() {
           <p>Oops! It looks like there is no photo of the day for the day you picked. Please be sure you aren't trying to look into the future.</p>
         </div> 
       )
-    } else {
+    } else if (mediaType === "image") {
       return <Image imgUrl={image} />
-    } //alt return video player
+    } else {
+      return <ReactPlayer className="react-player" url={image} playing />
+    }
   }
 
   return (
