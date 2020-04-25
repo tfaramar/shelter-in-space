@@ -12,7 +12,6 @@ import Image from './components/Image';
 
 function App() {
   const [errMsg, setErrMsg] = useState(false);
-  //set isVideo slice of state
   const [date, setDate] = useState("");
   const [credit, setCredit] = useState("");
   const [title, setTitle] = useState("");
