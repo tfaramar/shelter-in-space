@@ -1,12 +1,10 @@
-## Welcome to Shelter in Space!
+## :sparkles: [Welcome to Shelter in Space!](https://shelter-in-space.netlify.app/) :sparkles:
 
-### :sparkles: This project is live [here](https://shelter-in-space.netlify.app/) :sparkles:
+With your body, you can visit the world. With your mind (and some help from the Internet) you can visit the universe. 
 
-## How I built this
+This minimal website was created for anyone feeling cooped up during the current shelter-in-place. It leverages React hooks, old-fashioned CSS, and the axios HTTP client to fetch and display images and videos of the cosmos from NASA's Photo of the Day API. 
 
-This minimal React app leverages React hooks, old-fashioned CSS, and 
-
-## Scripts
+### Scripts, in case you want to play around with this
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). If the project directory, you can run:
 
