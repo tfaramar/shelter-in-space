@@ -2,7 +2,7 @@
 
 With your body, you can visit the world. With your mind (and some help from the Internet) you can visit the universe. 
 
-This minimal website was created for anyone feeling cooped up during the current shelter-in-place. It leverages React hooks, old-fashioned CSS, and the axios HTTP client to fetch and display images and videos of the cosmos from NASA's Photo of the Day API. 
+This minimal website was created for anyone feeling cooped up during the current shelter-in-place. It leverages React hooks, old-fashioned CSS, and the axios HTTP client to fetch and display images and videos of the cosmos from [NASA's Photo of the Day API](https://api.nasa.gov/#apod). 
 
 ### Scripts, in case you want to play around with this
 
