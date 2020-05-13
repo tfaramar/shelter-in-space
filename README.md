@@ -6,7 +6,7 @@ This minimal website was created for anyone feeling cooped up during the current
 
 ### Scripts, in case you want to play around with this
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). If the project directory, you can run:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). From the project directory, you can run:
 
 `npm start` runs the app in the development mode at [http://localhost:3000](http://localhost:3000).
 `npm run build` builds the app for production to the `build` folder.
